@@ -1,6 +1,6 @@
 let sketchbox = document.querySelector("#sketchbox");
 let redBtn = document.querySelector("#redBtn");
-let orangeBtn = document.querySelector("#orangeBtn");
+let aquaBtn = document.querySelector("#aquaBtn");
 let yellowBtn = document.querySelector("#yellowBtn");
 let greenBtn = document.querySelector("#greenBtn");
 let blueBtn = document.querySelector("#blueBtn");
@@ -13,15 +13,30 @@ let grid32 = document.querySelector("#grid32");
 let grid48 = document.querySelector("#grid48");
 let eraseBtn = document.querySelector("#eraseBtn");
 
+let gridSize = 16;
 let penColor = 'black';
 
-grid16.onclick = () => createTiles(16);
-grid24.onclick = () => createTiles(24);
-grid32.onclick = () => createTiles(32);
-grid48.onclick = () => createTiles(48);
+grid16.onclick = () => {
+    gridSize = 16;
+    createTiles();
+};
+grid24.onclick = () => {
+    gridSize = 24;
+    createTiles();
+};
+grid32.onclick = () => {
+    gridSize = 32;
+    createTiles();
+};
+grid48.onclick = () => {
+    gridSize = 48;
+    createTiles();
+};
+
+eraseBtn.onclick = () => createTiles();
 
 redBtn.onclick = () => penColor = "red";
-orangeBtn.onclick = () => penColor = "orange";
+aquaBtn.onclick = () => penColor = "aqua";
 yellowBtn.onclick = () => penColor = "yellow";
 greenBtn.onclick = () => penColor = "green";
 blueBtn.onclick = () => penColor = "blue";
@@ -29,7 +44,7 @@ blackBtn.onclick = () => penColor = "black";
 purpleBtn.onclick = () => penColor = "purple";
 rainbowBtn.onclick = () => penColor = "rainbow";
 
-function createTiles(gridSize){
+function createTiles(){
     sketchbox.innerHTML = "";
     for (let i = 0; i < gridSize ** 2; i++) {
         tile = document.createElement('div');
