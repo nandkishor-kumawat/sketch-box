@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+:root{
+    --sketchboxwh:480px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* height: 600px; */
+    /* width: 600px; */
+    /* margin: 40px auto; */
+    /* background-color: aqua; */
+    padding: 20px;
+}
+
+#sketchbox {
+    box-sizing: content-box;
+    width: var(--sketchboxwh);
+    height: var(--sketchboxwh);
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+}
+
+.sketchtile {
+    background-color: red;
+    box-sizing: border-box;
+    width: calc(var(--sketchboxwh)/16);
+    height: calc(var(--sketchboxwh)/16);
+}
+.tile-16{
+    width: calc(var(--sketchboxwh)/16);
+    height: calc(var(--sketchboxwh)/16);
+}
+.tile-24{
+    width: calc(var(--sketchboxwh)/24);
+    height: calc(var(--sketchboxwh)/24);
+}
+.tile-32{
+    width: calc(var(--sketchboxwh)/32);
+    height: calc(var(--sketchboxwh)/32);
+}
+.tile-48{
+    width: calc(var(--sketchboxwh)/48);
+    height: calc(var(--sketchboxwh)/48);
+}
+.btn-container{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    gap: 10px;
+    margin: 10px;
+    width: 480px;
+}
+.btn-container .btn{
+    padding: 6px 18px;
+
+}
