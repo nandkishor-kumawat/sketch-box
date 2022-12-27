@@ -16,7 +16,13 @@
     height: 100vh;
     padding: 20px;
 }
-
+h1{
+    margin:40px;
+    color: #fff;
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
 #sketchbox {
     box-sizing: content-box;
     width: var(--sketchboxwh);
