@@ -14,15 +14,35 @@ let grid48 = document.querySelector("#grid48");
 let eraseBtn = document.querySelector("#eraseBtn");
 
 let penColor = 'black';
-let gridSize = 16;
 
-for (let i = 0; i < 16 ** 2; i++) {
-    tile = document.createElement('div')
-    tile.classList.add('sketchtile')
-    tile.addEventListener('mouseover', (e) => {
-        doColor(e);
-    })
-    sketchbox.appendChild(tile)
+grid16.onclick = () => createTiles(16);
+grid24.onclick = () => createTiles(24);
+grid32.onclick = () => createTiles(32);
+grid48.onclick = () => createTiles(48);
+
+redBtn.onclick = () => penColor = "red";
+orangeBtn.onclick = () => penColor = "orange";
+yellowBtn.onclick = () => penColor = "yellow";
+greenBtn.onclick = () => penColor = "green";
+blueBtn.onclick = () => penColor = "blue";
+blackBtn.onclick = () => penColor = "black";
+purpleBtn.onclick = () => penColor = "purple";
+rainbowBtn.onclick = () => penColor = "rainbow";
+
+function createTiles(gridSize){
+    sketchbox.innerHTML = "";
+    for (let i = 0; i < gridSize ** 2; i++) {
+        tile = document.createElement('div');
+        tile.classList.add('sketchtile');
+        if(gridSize == 16) tile.classList.add('tile-16');
+        if(gridSize == 24) tile.classList.add('tile-24');
+        if(gridSize == 32) tile.classList.add('tile-32');
+        if(gridSize == 48) tile.classList.add('tile-48');
+        tile.addEventListener('mouseover', (e) => {
+            doColor(e);
+        })
+        sketchbox.appendChild(tile);
+    }
 }
 
 function doColor(e) {
@@ -35,27 +55,4 @@ function doColor(e) {
     e.target.style.backgroundColor = penColor;
 };
 
-redBtn.addEventListener('click', () => {
-    penColor = "red";
-})
-orangeBtn.addEventListener('click', () => {
-    penColor = "orange";
-})
-yellowBtn.addEventListener('click', () => {
-    penColor = "yellow";
-})
-greenBtn.addEventListener('click', () => {
-    penColor = "green";
-})
-blueBtn.addEventListener('click', () => {
-    penColor = "blue";
-})
-blackBtn.addEventListener('click', () => {
-    penColor = "black";
-})
-purpleBtn.addEventListener('click', () => {
-    penColor = "purple";
-})
-rainbowBtn.addEventListener('click', () => {
-    penColor = "rainbow";
-})
+
