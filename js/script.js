@@ -55,4 +55,4 @@ function doColor(e) {
     e.target.style.backgroundColor = penColor;
 };
 
-
+createTiles(16);
