@@ -32,9 +32,8 @@ p {
 
 #sketchbox {
     box-sizing: content-box;
-    width: var(--sketchboxwh);
-    height: var(--sketchboxwh);
-    border: 1px solid black;
+    max-width: var(--sketchboxwh);
+    max-height: var(--sketchboxwh);
     display: flex;
     flex-wrap: wrap;
     /* background-color: #dfdfdf; */
@@ -64,6 +63,7 @@ p {
     width: calc(var(--sketchboxwh)/48);
     height: calc(var(--sketchboxwh)/48);
 }
+
 
 .btn-container {
     display: flex;
