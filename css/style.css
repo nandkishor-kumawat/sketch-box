@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    /* box-sizing: border-box; */
 }
 
 :root {
@@ -14,14 +15,19 @@
     flex-direction: column;
     background-color: coral;
     height: 100vh;
+    padding: 10px;
 }
 
 h1 {
-    margin: 10px;
+    /* margin: 5px auto; */
     color: #fff;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
+}
+
+p {
+    margin: 5px auto;
 }
 
 #sketchbox {
@@ -77,46 +83,21 @@ h1 {
     justify-content: space-between;
     height: 35px;
 }
-.grid-group{
+
+.grid-group {
     display: flex;
     justify-content: space-between;
+    gap: 10px;
 }
+
 .colorBtn {
     font-size: 0;
     border: none;
-    background: var(--btnColor);
+    /* background: var(--btnColor); */
     border-radius: 50%;
 
 }
 
-#redBtn {
-    --btnColor: red;
-}
-
-#aquaBtn {
-    --btnColor: aqua;
-}
-
-#yellowBtn {
-    --btnColor: yellow;
-}
-
-#greenBtn {
-    --btnColor: green;
-}
-
-#blueBtn {
-    --btnColor: blue;
-}
-
-#blackBtn {
-    --btnColor: black;
-}
-
-#purpleBtn {
-    --btnColor: purple;
-}
-
 #rainbowBtn {
-    --btnColor: linear-gradient(90deg, #f44336 0%, #f44336 14.2857142857%, #f4e636 14.2857142857%, #f4e636 28.5714285714%, #5ff436 28.5714285714%, #5ff436 42.8571428571%, #36f4b0 42.8571428571%, #36f4b0 57.1428571429%, #3696f4 57.1428571429%, #3696f4 71.4285714286%, #7936f4 71.4285714286%, #7936f4 85.7142857143%, #f436cc 85.7142857143%, #f436cc 100%, #f44336 100%, #f44336 114.2857142857%);
+    background: linear-gradient(90deg, #f44336 0%, #f44336 14.2857142857%, #f4e636 14.2857142857%, #f4e636 28.5714285714%, #5ff436 28.5714285714%, #5ff436 42.8571428571%, #36f4b0 42.8571428571%, #36f4b0 57.1428571429%, #3696f4 57.1428571429%, #3696f4 71.4285714286%, #7936f4 71.4285714286%, #7936f4 85.7142857143%, #f436cc 85.7142857143%, #f436cc 100%, #f44336 100%, #f44336 114.2857142857%);
 }
