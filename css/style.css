@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
 }
 
 :root {
@@ -19,7 +18,6 @@
 }
 
 h1 {
-    /* margin: 5px auto; */
     color: #fff;
     font-size: 3rem;
     font-weight: bold;
@@ -32,11 +30,10 @@ p {
 
 #sketchbox {
     box-sizing: content-box;
-    max-width: var(--sketchboxwh);
-    max-height: var(--sketchboxwh);
+    width: var(--sketchboxwh);
+    height: var(--sketchboxwh);
     display: flex;
     flex-wrap: wrap;
-    /* background-color: #dfdfdf; */
     background-color: #fff;
 }
 
@@ -93,7 +90,6 @@ p {
 .colorBtn {
     font-size: 0;
     border: none;
-    /* background: var(--btnColor); */
     border-radius: 50%;
 
 }
