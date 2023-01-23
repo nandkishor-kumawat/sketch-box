@@ -13,18 +13,22 @@ const createTiles = val => {
         tile.classList.add('sketchtile');
         tile.classList.add(`tile-${gridSize}`);
         tile.onmouseover = () => doColor();
+        tile.ontouchmove = () => doColor();
         sketchbox.appendChild(tile);
     }
 }
 
 const doColor = () => {
+   let e = event.type == "touchmove" ? event.touches[0] : event
+//    console.log(event)
     if (penColor == "rainbow") {
         let r = Math.floor(Math.random() * 255);
         let g = Math.floor(Math.random() * 255);
         let b = Math.floor(Math.random() * 255);
-        event.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+
+        e.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
     }
-    event.target.style.backgroundColor = penColor;
+    e.target.style.backgroundColor = penColor;
 };
 
 colorBtn.forEach(btn => btn.onclick = () => penColor = (btn.textContent).toLowerCase());
